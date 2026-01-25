@@ -13,22 +13,25 @@ $items = ["Home", "About", "Contact"];
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>My PHP Page</title>
 </head>
-<body>
 
+<header>
 <h1>Welcome</h1>
+</header>
 
+<body>
 <ul>
-<?php foreach ($items as $item): ?>
-    <li><?= $item ?></li>
-<?php endforeach; ?>
+    <?php foreach ($items as $item): ?>
+        <li><?= $item ?></li>
+    <?php endforeach; ?>
 </ul>
 
 <footer>
-    <p>&copy; 2026</p>
+    <p> &copy; 2026</p>
 </footer>
-
 </body>
+
 </html>
