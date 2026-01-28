@@ -2,20 +2,20 @@
 <main>
   <h2> Order Online - Easy & Simple (And Totally Secure...) 🧁</h2>
   <form action="process.php" method="post">
-
+<!-- STEP ONE - Add Client Side Validation with HTML -->
     <!-- Customer Information -->
     <fieldset>
       <legend>Customer Information</legend>
         <label for="first_name">First name</label>
-        <input type="text" id="first_name" name="first_name">
+        <input type="text" id="first_name" name="first_name" required>
         <label for="last_name">Last name</label>
-        <input type="text" id="last_name" name="last_name">
+        <input type="text" id="last_name" name="last_name" required>
         <label for="phone">Phone number</label>
-        <input type="text" id="phone" name="phone" placeholder="555-123-4567">
+        <input type="tel" id="phone" name="phone" placeholder="555-123-4567" required>
         <label for="address">Address</label>
-        <input type="text" id="address" name="address">
-        <label for="email">Address</label>
-        <input type="text" id="email" name="email">
+        <input type="text" id="address" name="address" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
     </fieldset>
 
     <!-- Order Details -->
