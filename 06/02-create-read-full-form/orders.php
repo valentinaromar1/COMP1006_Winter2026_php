@@ -6,13 +6,13 @@ require "includes/connect.php"; // connect to db
 $sql = "SELECT * FROM orders1 ORDER BY created_at DESC"; 
 
 //prepare
-$stmt = $pdo->prepare($sql); 
+$stmt = $pdo->prepare($sql);  
 
 //execute 
 $stmt->execute(); 
+
 //retrieve all rows returned by a SQL query at once
 $orders = $stmt->fetchAll(); 
-
 ?>
 
 <main class="mt-4">
@@ -26,8 +26,8 @@ $orders = $stmt->fetchAll();
 
         <?php
           // Calculate total items
-          $total = 
-          $order['chaos_croissant'] + $order['existential_eclair'] + $order['procrastination_cookie']
+          $total = $order['chaos_croissant'] + $order['existential_eclair'] + $order['procrastination_cookie']
+        
         ?>
 
         <li class="mb-3">
