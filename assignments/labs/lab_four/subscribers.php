@@ -43,6 +43,7 @@ $subscribers = []; // placeholder
       </thead>
       <tbody>
         <!-- TODO: Loop through $subscribers and output each row -->
+        echo "name: {$firstName} {$lastName} : Email: {$email}<br>";
       </tbody>
     </table>
   <?php endif; ?>
