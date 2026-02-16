@@ -68,7 +68,7 @@ if (!empty($errors)) {
 
 /*4*/
 
-<<<<<<< HEAD
+
 //build our qwuery
 
 $sql = "INSERT INTO orders (frist_name, last_name, phone, address, email, comments) VALUES (:frist_name, :last_name, :phone, :address, :email, :comments) ";
@@ -84,7 +84,7 @@ $stmt->bindParam(":comments", $comments);
 
 $stmt->execute();
 $pdo = null;
-=======
+
 //build our query using named placeholders 
 
 
