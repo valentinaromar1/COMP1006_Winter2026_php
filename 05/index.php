@@ -99,11 +99,10 @@
       <p>
         <label for="comments" class="form-label">Comments (optional)</label><br>
         <textarea id="comments" name="comments" rows="4"
-<<<<<<< HEAD
+
         placeholder="Allergies, delivery instructions, custom messages..." class="form" ></textarea>
-=======
+
  
->>>>>>> 2821ec28b058b5400558e88283b381ac2639188e
       </p>
     </fieldset>
 
