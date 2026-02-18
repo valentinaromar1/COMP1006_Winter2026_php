@@ -1,4 +1,5 @@
 <?php require "includes/header.php" ?>
+<?php require "includes/connect.php" ?>
 
 <main>
     <h2> Online resume builder (beta v0.1)</h2>
@@ -20,7 +21,7 @@
         <input type="text" id="email" name="email" class="form-control">
         
         <label for="currentPos" class="form-label">Current Possition</label>
-        <input type="text" id="email" name="email" class="form-control">
+        <input type="text" id="currentPos" name="currentPos" class="form-control">
     </fieldset>
 
     <fieldset>
@@ -45,3 +46,4 @@
       
   </form>
 </main> 
+<?php require "includes/footer.php" ?>
