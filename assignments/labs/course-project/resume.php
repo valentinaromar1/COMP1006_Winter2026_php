@@ -26,6 +26,20 @@
         <input type="text" id="email" name="email" class="form-control">
     </fieldset>
 
+    <fieldset>
+      <!--prompt users to add small description of themself and their skills -->
+    <legend>Personal Information</legend>
+
+      <p>
+        <label for="skills" class="form-label">List skills</label>
+        <textarea id="skills" name="skills" rows="8" placeholder="ex: team work, tech, " class="form-control"></textarea>
+      </p>
+
+      <p>
+        <label for="bio" class="form-label">bio</label>
+        <textarea id="bio" name="bio" rows="10" placeholder="ex: " class="form-control"></textarea>
+      </p>
+    </fieldset>
 
     <p>
       <button type="submit" class="btn btn-primary">done resume</button>
