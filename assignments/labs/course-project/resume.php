@@ -16,9 +16,6 @@
         <label for="phone" class="form-label">Phone number</label>
         <input type="tel" id="phone" name="phone" placeholder="555-123-4567" class="form-control">
 
-        <label for="address" class="form-label">Address</label>
-        <input type="text" id="address" name="address" class="form-control">
-
         <label for="email" class="form-label">Email</label>
         <input type="text" id="email" name="email" class="form-control">
         
