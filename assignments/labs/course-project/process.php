@@ -50,7 +50,16 @@
 <div class="alert alert-success">
     <h1>please view your resume  <?= htmlspecialchars($firstName) ?>!</h1>
     <p>
+        <p><?= htmlspecialchars($firstName) ?> <?= htmlspecialchars($lastName) ?></p>
+       
+        <?= htmlspecialchars($email) ?>
+
+        <?= htmlspecialchars($phone) ?>
+
+        <?= htmlspecialchars($currentPos) ?>
+
+        <?= htmlspecialchars($skills) ?>
         
-        <strong><?= htmlspecialchars($email) ?></strong>.
+        <?= htmlspecialchars($bio) ?>
     </p>
 </div>
