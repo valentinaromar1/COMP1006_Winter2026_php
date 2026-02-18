@@ -39,9 +39,12 @@
         <label for="bio" class="form-label">bio</label>
         <textarea id="bio" name="bio" rows="10" placeholder="ex: " class="form-control"></textarea>
       </p>
-    </fieldset>
+      <!--submits form for the resume-->
+      </fieldset>
 
-    <p>
-      <button type="submit" class="btn btn-primary">done resume</button>
-    </p>
-</main>
+      <p>
+        <button type="submit" class="btn btn-primary">done resume</button>
+      </p>
+      
+  </form>
+</main> 
