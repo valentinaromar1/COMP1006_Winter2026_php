@@ -5,7 +5,7 @@
     $lastName  = trim(filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_SPECIAL_CHARS));
     $email     = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
     $phone     = trim(filter_input(INPUT_POST, 'phone', FILTER_SANITIZE_SPECIAL_CHARS));
-    $currentPos   = trim(filter_input(INPUT_POST, 'address', FILTER_SANITIZE_SPECIAL_CHARS));
+    $currentPos   = trim(filter_input(INPUT_POST, 'current_pos', FILTER_SANITIZE_SPECIAL_CHARS));
     $skills = trim(filter_input(INPUT_POST, 'skills', FILTER_SANITIZE_SPECIAL_CHARS));
     $bio = trim(filter_input(INPUT_POST, 'bio', FILTER_SANITIZE_SPECIAL_CHARS));
 
@@ -45,21 +45,56 @@
         if ($bio === null || $bio === '') {
             $errors[] = "please input bio.";
         }
+
+
+$sql = "
+    INSERT INTO orders1 (
+        first_name,
+        last_name,
+        email,
+        phone,
+        current_pos,
+        skills,
+        bio
+    ) VALUES (
+        :first_name,
+        :last_name,
+        :email,
+        :phone,
+        :current_pos,
+        :skills,
+        :bio
+";
+
+$stmt = $pdo->prepare($sql);
+
+$stmt->bindParam(':first_name', $firstName);
+$stmt->bindParam(':last_name', $lastName);
+$stmt->bindParam(':email', $email);
+$stmt->bindParam(':phone', $phone);
+$stmt->bindParam(':current_pos', $currentPos);
+$stmt->bindParam(':skills', $skills);
+$stmt->bindParam(':bio', $bio);
+
 ?>
 
 <div class="alert alert-success">
-    <h1>please view your resume  <?= htmlspecialchars($firstName) ?>!</h1>
+    <h1>-------------------------------------------</h1>
     <p>
-        <p><?= htmlspecialchars($firstName) ?> <?= htmlspecialchars($lastName) ?></p>
+        <!--formats the resume  page into a decent form-->
+        <p>-full name: <?= htmlspecialchars($firstName) ?>, <?= htmlspecialchars($lastName) ?>-</p>
        
-        <?= htmlspecialchars($email) ?>
+        <P>-<?= htmlspecialchars($email) ?>-</P>
 
-        <?= htmlspecialchars($phone) ?>
+        <p>-<?= htmlspecialchars($phone) ?>-</p>
 
-        <?= htmlspecialchars($currentPos) ?>
+        <p>-<?= htmlspecialchars($currentPos) ?>-</p>
 
-        <?= htmlspecialchars($skills) ?>
-        
-        <?= htmlspecialchars($bio) ?>
+        <P>-----------------------------------------</P>
+
+        <p>-<?= htmlspecialchars($skills) ?>-</p>
+
+        <p>-<?= htmlspecialchars($bio) ?>-</p>
     </p>
+
 </div>
