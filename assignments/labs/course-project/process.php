@@ -1,5 +1,6 @@
 <?php
     require "includes/connect.php";  
+    require "includes/header.php";  
 
     $firstName = trim(filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_SPECIAL_CHARS));
     $lastName  = trim(filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_SPECIAL_CHARS));
@@ -83,19 +84,19 @@
     <h1>-------------------------------------------</h1>
     <p>
         <!--formats the resume  page into a decent form-->
-        <p>-full name: <?= htmlspecialchars($firstName) ?>, <?= htmlspecialchars($lastName) ?>-</p>
+        <p>-full name: <?= htmlspecialchars($firstName)?>, <?= htmlspecialchars($lastName) ?>-</p>
        
-        <P>-<?= htmlspecialchars($email) ?>-</P>
+        <P>-<?= htmlspecialchars($email)?>-</P>
 
-        <p>-<?= htmlspecialchars($phone) ?>-</p>
+        <p>-<?= htmlspecialchars($phone)?>-</p>
 
-        <p>-<?= htmlspecialchars($currentPos) ?>-</p>
+        <p>-<?= htmlspecialchars($currentPos)?>-</p>
 
         <P>-----------------------------------------</P>
 
-        <p>-<?= htmlspecialchars($skills) ?>-</p>
+        <p>-<?= htmlspecialchars($skills)?>-</p>
 
-        <p>-<?= htmlspecialchars($bio) ?>-</p>
+        <p>-<?= htmlspecialchars($bio)?>-</p>
     </p>
 
 </div>
