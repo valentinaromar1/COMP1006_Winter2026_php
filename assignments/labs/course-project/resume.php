@@ -2,7 +2,7 @@
 <?php require "includes/connect.php" ?>
 
 <main>
-    <h2> Online resume builder (beta v0.1)</h2>
+    <h2> Online resume builder (beta v0.2)</h2>
     <form action="process.php" method="post">
 
     <fieldset>

@@ -24,7 +24,7 @@
             $errors[] = "Email must be a valid email address.";
         }
 
-      
+        //phone params copied from in class example
         if ($phone === null || $phone === '') {
             $errors[] = "Phone number is required.";
         } elseif (!filter_var($phone, FILTER_VALIDATE_REGEXP, [
@@ -47,35 +47,36 @@
         }
 
 
-$sql = "
-    INSERT INTO orders1 (
-        first_name,
-        last_name,
-        email,
-        phone,
-        current_pos,
-        skills,
-        bio
-    ) VALUES (
-        :first_name,
-        :last_name,
-        :email,
-        :phone,
-        :current_pos,
-        :skills,
-        :bio
-";
+    $sql = "
+        INSERT INTO orders1 (
+            first_name,
+            last_name,
+            email,
+            phone,
+            current_pos,
+            skills,
+            bio
+        ) VALUES (
+            :first_name,
+            :last_name,
+            :email,
+            :phone,
+            :current_pos,
+            :skills,
+            :bio
+    ";
 
-$stmt = $pdo->prepare($sql);
+    $stmt = $pdo->prepare($sql);
 
-$stmt->bindParam(':first_name', $firstName);
-$stmt->bindParam(':last_name', $lastName);
-$stmt->bindParam(':email', $email);
-$stmt->bindParam(':phone', $phone);
-$stmt->bindParam(':current_pos', $currentPos);
-$stmt->bindParam(':skills', $skills);
-$stmt->bindParam(':bio', $bio);
+    $stmt->bindParam(':first_name', $firstName);
+    $stmt->bindParam(':last_name', $lastName);
+    $stmt->bindParam(':email', $email);
+    $stmt->bindParam(':phone', $phone);
+    $stmt->bindParam(':current_pos', $currentPos);
+    $stmt->bindParam(':skills', $skills);
+    $stmt->bindParam(':bio', $bio);
 
+    $stmt->execute();
 ?>
 
 <div class="alert alert-success">
