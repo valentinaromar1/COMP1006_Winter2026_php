@@ -5,7 +5,7 @@
   <body>
     <fieldset>
     <!-- Customer Information (copied from in class example with few tweeks) -->
-      <legend>Resume Information input</legend>
+    <em>  <legend>Resume Information input</legend>
         <label for="first_name" class="form-label">First name</label>
         <input type="text" id="first_name" name="first_name" class="form-control">
 
@@ -42,6 +42,6 @@
       <p>
         <button type="submit" class="btn btn-primary">done resume</button>
       </p>
-      
+      </em>
   </form>
 </main> 
