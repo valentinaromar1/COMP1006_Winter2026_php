@@ -85,7 +85,7 @@ $resume = $stmt->fetch();
 
   <form method="post">
 
-    <h4 class="mt-3">resume Info</h4>
+    <h3 class="mt-3"><u>resume Info</u></h3>
 
     <label class="form-label">First Name:</label>
     <input  type="text" name="first_name"   class="form-control mb-3"   value="<?= htmlspecialchars($order['first_name']); ?>"  required/>

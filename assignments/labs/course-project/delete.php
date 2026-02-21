@@ -3,7 +3,7 @@
 //connect to db (which is not working for me)
 require 'includes/connect.php'; 
 
-$customerId = $_GET['id']; 
+$resumeId = $_GET['id']; 
 
 
 $sql = "DELETE from resume1 

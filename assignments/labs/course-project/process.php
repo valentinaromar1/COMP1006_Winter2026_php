@@ -81,19 +81,19 @@
     <h1>-------------------------------------------</h1>
     <p>
         <!--formats the resume  page into a decent form-->
-        <p>-full name: <?= htmlspecialchars($firstName)?>, <?= htmlspecialchars($lastName) ?>-</p>
+        <p><u>full name:</u> <?= htmlspecialchars($firstName)?>, <?= htmlspecialchars($lastName) ?></p>
        
-        <P>-<?= htmlspecialchars($email)?>-</P>
+        <P><u>email:</u> <?= htmlspecialchars($email)?></P>
 
-        <p>-<?= htmlspecialchars($phone)?>-</p>
+        <p><u>Phone number:</u> <?= htmlspecialchars($phone)?></p>
 
-        <p>-<?= htmlspecialchars($currentPos)?>-</p>
+        <p><u>current postion:</u> <?= htmlspecialchars($currentPos)?></p>
 
         <P>-----------------------------------------</P>
 
-        <p>-<?= htmlspecialchars($skills)?>-</p>
+        <p><u>skills:</u> <?= htmlspecialchars($skills)?></p>
 
-        <p>-<?= htmlspecialchars($bio)?>-</p>
+        <p><u>bio:</u> <?= htmlspecialchars($bio)?></p>
     </p>
 
 </div>
