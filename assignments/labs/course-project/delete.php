@@ -5,7 +5,7 @@ require 'includes/connect.php';
 
 $resumeId = $_GET['id']; 
 
-
+//deletes the proper file from the sql
 $sql = "DELETE from resume1 
         WHERE resume_id = :resume_id"; 
 
@@ -19,3 +19,4 @@ $stmt->execute();
 
 header("Location: resume.php"); 
 exit; 
+?>

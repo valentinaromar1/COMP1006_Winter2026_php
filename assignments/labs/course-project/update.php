@@ -6,7 +6,7 @@
 if (!isset($_GET['id'])) {
   die("No ID provided");}
 
-    $reusmeId= $_GET['id'];
+    $resumeId= $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -35,6 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $error = "the fields of frist name, last name and email must be filled out";
     } else {
 
+    //updates the sql fields with the new info inputed 
     $sql = "UPDATE resume1
             SET first_name = :first_name,
                 last_name = :last_name,
@@ -109,7 +110,7 @@ $resume = $stmt->fetch();
     <input type="text" name="bio" class="form-control mb-3" value="<?= htmlspecialchars($resume['bio']); ?>">
 
  
-    <button class="btn btn-primary">Save Changes</button>
+    <button class="btn btn-primary">:Save Changes:</button>
     <a href="resume.php" class="btn btn-secondary">Cancel</a>
 
   </form>

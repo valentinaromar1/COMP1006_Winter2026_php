@@ -2,6 +2,7 @@
     require "includes/connect.php";  
     require "includes/header.php";  
 
+    //trims and filters the inputs of the users
     $firstName = trim(filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_SPECIAL_CHARS));
     $lastName  = trim(filter_input(INPUT_POST, 'last_name', FILTER_SANITIZE_SPECIAL_CHARS));
     $email     = filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL);
@@ -22,7 +23,7 @@
         if ($email === null || $email === '') {
             $errors[] = "please input last name";
         } 
-        elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        else if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
             $errors[] = "Email must be a valid email address";
         }
 
@@ -30,11 +31,13 @@
         if ($phone === null || $phone === '') {
             $errors[] = "please input Phone number.";
         } 
-        elseif (!filter_var($phone, FILTER_VALIDATE_REGEXP, [
+        else if (!filter_var($phone, FILTER_VALIDATE_REGEXP, [
             'options' => ['regexp' => '/^[0-9\-\+\(\)\s]{7,25}$/']
         ])) {
             $errors[] = "Phone number is not vaild.";
         }
+
+        //current position is not a requirement and can be left as a blank
 
         if ($skills === null || $skills === '') {
             $errors[] = "please input something useful.";
@@ -44,7 +47,7 @@
             $errors[] = "please input bio.";
         }
 
-
+    //insert the fields to the sql file
     $sql = "
         INSERT INTO resume1 (
             first_name,
@@ -80,6 +83,8 @@
 <div class="alert alert-success">
     <h1>-------------------------------------------</h1>
     <p>
+        <?php require "includes/header.php" ?>
+    
         <!--formats the resume  page into a decent form-->
         <p><u>full name:</u> <?= htmlspecialchars($firstName)?>, <?= htmlspecialchars($lastName) ?></p>
        

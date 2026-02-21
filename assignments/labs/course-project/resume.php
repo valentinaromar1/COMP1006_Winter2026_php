@@ -1,10 +1,8 @@
-
-
 <main>
     <?php require "includes/header.php" ?>
     <?php require "includes/connect.php" ?>
     <form action="process.php" method="post">
-
+  <body>
     <fieldset>
     <!-- Customer Information (copied from in class example with few tweeks) -->
       <legend>Resume Information input</legend>
@@ -23,6 +21,7 @@
         <label for="currentPos" class="form-label">Current Possition</label>
         <input type="text" id="currentPos" name="currentPos" class="form-control">
     </fieldset>
+  </body>
 
     <fieldset>
       <!--prompt users to add small description of themself and their skills -->
@@ -46,4 +45,3 @@
       
   </form>
 </main> 
-<?php require "includes/footer.php" ?>
