@@ -46,7 +46,7 @@
 
 
     $sql = "
-        INSERT INTO orders1 (
+        INSERT INTO resume1 (
             first_name,
             last_name,
             email,
