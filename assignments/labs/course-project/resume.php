@@ -1,6 +1,7 @@
 <main>
     <?php require "includes/header.php" ?>
     <?php require "includes/connect.php" ?>
+    
     <form action="process.php" method="post">
   <body>
     <fieldset>

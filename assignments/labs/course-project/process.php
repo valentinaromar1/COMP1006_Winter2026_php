@@ -1,6 +1,5 @@
 <?php
-    require "includes/connect.php";  
-    require "includes/header.php";  
+    require "includes/connect.php";    
 
     //trims and filters the inputs of the users
     $firstName = trim(filter_input(INPUT_POST, 'first_name', FILTER_SANITIZE_SPECIAL_CHARS));
@@ -11,7 +10,7 @@
     $skills = trim(filter_input(INPUT_POST, 'skills', FILTER_SANITIZE_SPECIAL_CHARS));
     $bio = trim(filter_input(INPUT_POST, 'bio', FILTER_SANITIZE_SPECIAL_CHARS));
 
-    // Required fields
+    //Required fields
         if ($firstName === null || $firstName === '') {
             $errors[] = "please put first name";
         }

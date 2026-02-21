@@ -11,5 +11,4 @@ CREATE TABLE resume (
     skills TEXT,
     bio TEXT,
 
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );

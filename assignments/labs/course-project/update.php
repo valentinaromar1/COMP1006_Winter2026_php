@@ -31,9 +31,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     //$stmt->bindParam(':bio', $bio);
  
 
-    if ($firstName === '' || $lastName === '' || $email === '') {
+    if ($firstName === '' || $lastName === '' || $email === '' || $skills === '') {
         $error = "the fields of frist name, last name and email must be filled out";
-    } else {
+    } 
+    else {
 
     //updates the sql fields with the new info inputed 
     $sql = "UPDATE resume1
@@ -45,7 +46,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 skills = :skills,
                 bio = :bio,
              WHERE resume_id = :resume_id";
-        }
+    }
 
     $stmt = $pdo->prepare($sql);
 
