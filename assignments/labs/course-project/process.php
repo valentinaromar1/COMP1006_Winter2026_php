@@ -12,31 +12,28 @@
 
     // Required fields
         if ($firstName === null || $firstName === '') {
-            $errors[] = "First Name is required.";
+            $errors[] = "please put first name";
         }
 
         if ($lastName === null || $lastName === '') {
-            $errors[] = "Last Name is required.";
+            $errors[] = "please input last name";
         }
 
         if ($email === null || $email === '') {
-            $errors[] = "Email is required.";
-        } elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-            $errors[] = "Email must be a valid email address.";
+            $errors[] = "please input last name";
+        } 
+        elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            $errors[] = "Email must be a valid email address";
         }
 
         //phone params copied from in class example
         if ($phone === null || $phone === '') {
-            $errors[] = "Phone number is required.";
-        } elseif (!filter_var($phone, FILTER_VALIDATE_REGEXP, [
+            $errors[] = "please input Phone number.";
+        } 
+        elseif (!filter_var($phone, FILTER_VALIDATE_REGEXP, [
             'options' => ['regexp' => '/^[0-9\-\+\(\)\s]{7,25}$/']
         ])) {
-            $errors[] = "Phone number format is invalid.";
-        }
-
-
-        if ($currentPos === null || $currentPos === '') {
-            $errors[] = "Address is required.";
+            $errors[] = "Phone number is not vaild.";
         }
 
         if ($skills === null || $skills === '') {
