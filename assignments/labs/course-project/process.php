@@ -53,7 +53,7 @@
             last_name,
             email,
             phone,
-            current_pos,
+            currentPos,
             skills,
             bio
         ) VALUES (
@@ -64,6 +64,7 @@
             :current_pos,
             :skills,
             :bio
+        );
     ";
 
     $stmt = $pdo->prepare($sql);
