@@ -7,8 +7,6 @@ header("Pragma: no-cache");
 header("Expires: 0");
 
 
-
-
 if (empty($_SESSION["user_id"])) {
     header('Location:restricted.php');
     exit();
