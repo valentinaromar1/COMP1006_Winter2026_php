@@ -100,5 +100,11 @@
 
         <p><u>bio:</u> <?= htmlspecialchars($bio)?></p>
     </p>
-
+    
+    <p>
+        <a href="Update.php">make Changes</a>
+    </p>
+    <p>
+        <a href="delete.php">delete</a>
+    </p>
 </div>
