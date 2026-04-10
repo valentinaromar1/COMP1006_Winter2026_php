@@ -102,7 +102,7 @@
     </p>
     
     <p>
-        <a href="Update.php">make Changes</a>
+        <a href="Update.php">Make changes</a>
     </p>
     <p>
         <a href="delete.php">delete</a>
