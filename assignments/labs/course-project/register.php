@@ -18,34 +18,33 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $confirmPassword = $_POST['confirm_password'] ?? '';
 
     if ($username === '') {
-        $errors[] = "please put username.";
+        $errors[] = "please put username";
 
     }
 
-        if ($username === '') {
-        $errors[] = "please put username.";
-    }
-        if ($username === '') {
-        $errors[] = "please put username.";
+    if ($email === '') {
+        $errors[] = "please put email";
     }
 
-        if ($username === '') {
+    if ($username === '') {
         $errors[] = "please put username.";
     }
-
-        if ($username === '') {
-        $errors[] = "please put username.";
+    elseif (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = "please put a valid email";
     }
 
-        if ($username === '') {
-        $errors[] = "please put username.";
+    if ($password === '') {
+        $errors[] = "please put password that fits qualifications";
     }
 
-        if ($username === '') {
-        $errors[] = "please put username.";
+    if ($confirmPassword === '') {
+        $errors[] = "Please confirm password.";
     }
 
-        if ($username === '') {
-        $errors[] = "please put username.";
+    if ($password !== $confirmPassword) {
+        $errors[] = "please put matching password";
+    }
+    if (str(len($password)) < 8) {
+        $errors[] = "Password must be 8 characters long at least";
     }
 }
