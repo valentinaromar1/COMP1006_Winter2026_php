@@ -1,4 +1,4 @@
-<?php
+<?php 
 
 require "includes/connect.php";
 
@@ -68,3 +68,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         }
     }
 }
+
+?>
