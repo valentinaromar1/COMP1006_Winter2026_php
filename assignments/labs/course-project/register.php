@@ -10,6 +10,7 @@ $success = "";
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     
+// serverside validation
     $username = trim(filter_input(INPUT_POST, 'username', FILTER_SANITIZE_SPECIAL_CHARS));
 
     $email = trim(filter_input(INPUT_POST, 'email', FILTER_SANITIZE_EMAIL));
@@ -44,7 +45,26 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($password !== $confirmPassword) {
         $errors[] = "please put matching password";
     }
-    if (str(len($password)) < 8) {
+    if (strlen($password) < 8) {
         $errors[] = "Password must be 8 characters long at least";
+    }
+
+    if (empty($errors)) {
+
+    //may need changes due to email input
+        $sql = "SELECT id 
+                FROM users 
+                WHERE username = :username OR email = :email";
+
+        $stmt = $pdo->prepare($sql);
+
+        $stmt->bindParam(':username', $username);
+        $stmt->bindParam(':email', $email);
+
+        $stmt->execute();
+
+        if ($stmt->fetch()) {
+            $errors[] = "sorry, that username or email is already in use :/";
+        }
     }
 }
