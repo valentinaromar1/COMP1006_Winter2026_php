@@ -3,7 +3,16 @@
     <?php require "includes/connect.php" ?>
     
     <form action="process.php" method="post">
+
   <body>
+    <p>if you would like make an account with us to show your support(currently does nothing)</p>
+    <p>
+        <a href="register.php">register</a>
+    </p>
+    <p>
+        <a href="login.php">login</a>
+    </p>
+
     <fieldset>
     <!-- Customer Information (copied from in class example with few tweeks) -->
     <!--the h2 elements are ment to breakup the page -->
@@ -48,7 +57,6 @@
       <p>
         <button type="submit" class="btn btn-primary">done resume</button>
       </p>
-      <a href="homepage.php">home</a>
       </em>
   </form>
 </main> 

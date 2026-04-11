@@ -124,6 +124,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         <button type="submit" class="btn btn-primary">make account</button>
 
-        <a href="login.php" class="btn btn-secondary">login </a>
+        <a href="login.php" class="btn btn-secondary">login</a>
     </form>
 </main>

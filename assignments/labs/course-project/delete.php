@@ -14,7 +14,7 @@ $stmt = $pdo->prepare($sql);
 
 $stmt->bindParam(':resume_id', $resumeId);
 
-
+//fixed of for final
 $stmt->execute();
 
 

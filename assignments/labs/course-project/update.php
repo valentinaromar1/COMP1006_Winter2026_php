@@ -88,7 +88,7 @@ $resume = $stmt->fetch();
   <form method="post">
 
     <h3 class="mt-3"><u>Resume info</u></h3>
-    <label for="product_image" class="form-label">profile image</label>
+    <label for="profile_image" class="form-label">profile image</label>
     <input type="file" id="profile_image" name="profile_image" class="form-control mb-4" accept=".jpg,.jpeg,.png,.webp">
 
     <label class="form-label">First Name:</label>
