@@ -3,10 +3,8 @@
     require "includes/connect.php";
 
 
-if (!isset($_GET['id'])) {
-  die("No ID provided");}
 
-    $resumeId= $_GET['id'];
+  $resumeId= $_GET['id'];
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
@@ -70,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 $sql = "SELECT * 
         FROM resume1 
-        WHERE resume_id = :resume_id";
+        WHERE resume_id = :resumeId";
 
 $stmt = $pdo->prepare($sql);
 

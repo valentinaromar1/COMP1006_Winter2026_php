@@ -45,3 +45,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 }
 ?>
+
+//sends back to the index.page
+ <p>
+        <a href="index.php">resume builder</a>
+</p>

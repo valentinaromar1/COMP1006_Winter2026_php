@@ -6,15 +6,17 @@
 
   <body>
     <p>if you would like make an account with us to show your support(currently does nothing)</p>
+    //sends to register
     <p>
         <a href="register.php">register</a>
     </p>
+    //sends to login
     <p>
         <a href="login.php">login</a>
     </p>
 
     <fieldset>
-    <!-- Customer Information (copied from in class example with few tweeks) -->
+    <!-- resume Information -->
     <!--the h2 elements are ment to breakup the page -->
     <em>  <legend>Resume Information input</legend>
 
