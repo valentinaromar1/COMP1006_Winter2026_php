@@ -87,7 +87,9 @@ $resume = $stmt->fetch();
 
   <form method="post">
 
-    <h3 class="mt-3"><u>resume Info</u></h3>
+    <h3 class="mt-3"><u>Resume info</u></h3>
+    <label for="product_image" class="form-label">profile image</label>
+    <input type="file" id="profile_image" name="profile_image" class="form-control mb-4" accept=".jpg,.jpeg,.png,.webp">
 
     <label class="form-label">First Name:</label>
     <input  type="text" name="first_name"   class="form-control mb-3"   value="<?= htmlspecialchars($order['first_name']); ?>"  required/>
@@ -113,7 +115,7 @@ $resume = $stmt->fetch();
  
     <button class="btn btn-primary">:Save Changes:</button>
     <a href="resume.php" class="btn btn-secondary">Cancel</a>
-
+      
   </form>
 </main>
 ?>

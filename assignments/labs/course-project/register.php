@@ -63,7 +63,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         $stmt->execute();
 
-        if ($stmt->fetch()) {
+        if ($stmt->fetch()){
             $errors[] = "sorry, that username or email is already in use :/";
         }
     }
@@ -76,7 +76,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <h2>Sign Up for an account</h2>
 
     <?php 
-    if (!empty($errors)): ?>
+    if (!empty($errors)): 
+    ?>
         <div class="alert alert-danger">
             <h3>Please fix the errors :D</h3>
             <ul class="mb-0">
@@ -110,42 +111,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <form method="post" class="mt-3">
 
         <label for="username" class="form-label">username</label>
-        <input
-            type="text"
-            id="username"
-            name="username"
-            class="form-control mb-3"
-            value="<?= htmlspecialchars($username ?? ''); ?>"
-            required
-        >
+        <input type="text" id="username" name="username"  class="form-control mb-3" value="<?= htmlspecialchars($username ?? ''); ?>" required>
 
         <label for="email" class="form-label">email</label>
-        <input
-            type="email"
-            id="email"
-            name="email"
-            class="form-control mb-3"
-            value="<?= htmlspecialchars($email ?? ''); ?>"
-            required
-        >
+        <input type="email" id="email" name="email" class="form-control mb-3" value="<?= htmlspecialchars($email ?? ''); ?>" required>
 
         <label for="password" class="form-label">Password</label>
-        <input
-            type="password"
-            id="password"
-            name="password"
-            class="form-control mb-3"
-            required
-        >
+        <input type="password" id="password" name="password" class="form-control mb-3" required>
 
         <label for="confirm_password" class="form-label">Confirm Password</label>
-        <input
-            type="password"
-            id="confirm_password"
-            name="confirm_password"
-            class="form-control mb-4"
-            required
-        >
+        <input type="password" id="confirm_password" name="confirm_password" class="form-control mb-4" required>
 
         <button type="submit" class="btn btn-primary">make account</button>
 

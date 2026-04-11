@@ -9,6 +9,7 @@ $resumeId = $_GET['id'];
 $sql = "DELETE from resume1 
         WHERE resume_id = :resumeId"; 
 
+
 $stmt = $pdo->prepare($sql); 
 
 $stmt->bindParam(':resume_id', $resumeId);
