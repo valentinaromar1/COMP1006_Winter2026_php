@@ -10,7 +10,11 @@
     $skills = trim(filter_input(INPUT_POST, 'skills', FILTER_SANITIZE_SPECIAL_CHARS));
     $bio = trim(filter_input(INPUT_POST, 'bio', FILTER_SANITIZE_SPECIAL_CHARS));
 
-    //Required fields
+    //Required fields  
+
+        if ($profileImage === null || $profileImage === '') {
+            $profileImage === ""; 
+        }
         if ($firstName === null || $firstName === '') {
             $errors[] = "please put first name";
         }

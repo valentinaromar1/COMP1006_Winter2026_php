@@ -8,8 +8,9 @@
     <!-- Customer Information (copied from in class example with few tweeks) -->
     <!--the h2 elements are ment to breakup the page -->
     <em>  <legend>Resume Information input</legend>
-      <label for="product_image" class="form-label">profile image</label>
-        <input type="file" id="product_image" name="product_image" class="form-control mb-4" accept=".jpg,.jpeg,.png,.webp">
+
+      <label for="profile_image" class="form-label">profile image</label>
+        <input type="file" id="profile_image" name="profile_image" class="form-control mb-4" accept=".jpg,.jpeg,.png,.webp">
 <h2></h2>
         <label for="first_name" class="form-label">First name</label>
         <input type="text" id="first_name" name="first_name" class="form-control">
