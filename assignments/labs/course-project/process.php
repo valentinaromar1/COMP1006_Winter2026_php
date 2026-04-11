@@ -88,10 +88,6 @@
     <h1>-------------------------------------------</h1>
     <p>
         
-      <label for="profile_image" class="form-label">profile image</label>
-        <input type="file" id="profile_image" name="profile_image" class="form-control mb-4" accept=".jpg,.jpeg,.png,.webp">
-        <?php require "includes/header.php" ?>
-
         <?php 
         if ($profileImage  === null || $profileImage === '' ): 
         ?>
@@ -100,7 +96,7 @@
         </div>
         <?php 
         endif; 
-        
+
         ?>
         <!--formats the resume  page into a decent form-->
         <p><u>full name:</u> <?= htmlspecialchars($firstName)?>, <?= htmlspecialchars($lastName) ?></p>
