@@ -1,6 +1,6 @@
 <?php
 
-//connect to db (which is not working for me)
+//connect to database
 require 'includes/connect.php'; 
 
 $resumeId = $_GET['id']; 
