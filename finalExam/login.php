@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['username'] = $user['username'];
 
-            header("Location: index.php");
+            header("Location: upload.php");
             exit;
         } 
         else {
@@ -44,7 +44,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-//sends to upload.php
- <p>
-        <a href="index.php">resume builder</a>
-</p>
+<main class="container mt-4">
+    <h2>Login page</h2>
+
+    <?php if ($error !== ""): ?>
+
+        <div class="alert alert-danger">
+
+            <?= htmlspecialchars($error); ?>
+
+        </div>
+
+    <?php endif; ?>
+
+    <form method="post" class="mt-3">
+        <label for="username_or_email" class="form-label">Username or Email</label>
+        <input type="text" id="username_or_email" name="username_or_email" class="form-control mb-3" required>
+
+        <label for="password" class="form-label">Password</label>
+        <input type="password" id="password" name="password" class="form-control mb-4" required>
+
+        <button type="submit" class="btn btn-primary">Login</button>
+    </form>
+
+    <p>
+        <a href="upload.php">go to upload image</a>
+    </p>
+</main>
+

@@ -22,7 +22,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     }
     //makes sure user put a email
-    if ($useremail === '') {
+    if ($email === '') {
         $errors[] = "please put email";
     }
     //makes sure user put a vaild email
@@ -68,7 +68,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 ?>
 
-//sign up area
+
 <main class="container mt-4">
     <h2>Sign Up for an account</h2>
 
@@ -110,7 +110,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         <label for="username" class="form-label">username</label>
         <input type="text" id="username" name="username"  class="form-control mb-3" value="<?= htmlspecialchars($username ?? ''); ?>" required>
 
-        <label for="useremail" class="form-label">email</label>
+        <label for="email" class="form-label">email</label>
         <input type="email" id="email" name="email" class="form-control mb-3" value="<?= htmlspecialchars($email ?? ''); ?>" required>
 
         <label for="password" class="form-label">Password</label>
