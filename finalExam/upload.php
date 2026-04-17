@@ -1,4 +1,4 @@
-    <!-- image Information -->
+    <!-- image Information and upload -->
 <?php
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $imagePath = "imageUploads";
